@@ -1,43 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h2>Currency Converter</h2>
-        <form>
-          <div class="amount">
-            <p>Enter Amount</p>
-            <input value="1" type="text" />
-          </div>
-          <div class="dropdown">
-            <div class="from">
-              <p>From</p>
-              <div class="select-container">
-                <img src="https://flagsapi.com/US/flat/64.png" />
-                <select name="from"></select>
-              </div>
-            </div>
-            <i class="fa-solid fa-arrow-right-arrow-left"></i>
-            <div class="to">
-              <p>To</p>
-              <div class="select-container">
-                <img src="https://flagsapi.com/IN/flat/64.png" />
-                <select name="to"></select>
-              </div>
-            </div>
-          </div>
-          <div class="msg">1USD = 80INR</div>
-          <button>Get Exchange Rate</button>
-        </form>
+    <div class="claculator">
+      <div class="display" id="display"></div>
+      <div class="buttons">
+        <button class="btn" onclick="clearDisplay()">C</button>
+        <button class="btn" onclick="deleteLast()"><-</button>
+        <button class="btn" onclick="appendToDisplay('/')">/</button>
+        <button class="btn" onclick="appendToDisplay('+')">+</button>
+        <button class="btn" onclick="appendToDisplay('-')">-</button>
+        <button class="btn" onclick="appendToDisplay('*')">*</button>
+        <button class="btn" onclick="appendToDisplay('1')">1</button>
+        <button class="btn" onclick="appendToDisplay('2')">2</button>
+        <button class="btn" onclick="appendToDisplay('3')">3</button>
+        <button class="btn" onclick="appendToDisplay('4')">4</button>
+        <button class="btn" onclick="appendToDisplay('5')">5</button>
+        <button class="btn" onclick="appendToDisplay('6')">6</button>
+        <button class="btn" onclick="appendToDisplay('7')">7</button>
+        <button class="btn" onclick="appendToDisplay('8')">8</button>
+        <button class="btn" onclick="appendToDisplay('9')">9</button>
+        <button class="btn" onclick="appendToDisplay('0')">0</button>
+        <button class="btn" onclick="appendToDisplay('.')">.</button>
+        <button class="btn" id="equal" onclick="calculateResult()">=</button>
       </div>
-    
-    <script src="codes.js"></script>
+    </div>
+
     <script src="first.js"></script>
 </body>
 </html>
